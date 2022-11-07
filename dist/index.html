@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+    <style>
+      .map {
+        width: 100%;
+      }
+    </style>
+    <script type="module" crossorigin src="/pse-outagemap/dist/assets/index.f1d2d020.js"></script>
+    <link rel="stylesheet" href="/pse-outagemap/dist/assets/index.5c51e096.css">
+  </head>
+  <body>
+    <div id="map" class="map" style="top: 50px;"></div>
+    <form>
+      <label for="radius">radius size</label>
+      <input id="radius" type="range" min="1" max="50" step="1" value="10"/>
+      
+      <label for="duration">outage duration</label>
+      <input id="duration" type="range" min="1" max="24" step="1" value="12"/>
+
+      <label for="frequency">Mode</label>
+      <select id="radio_frequency">
+        <option value="frequency" selected>Frequency</option>
+        <option value="duration">Duration</option>
+      </select>
+
+      <label for="blur">blur size</label>
+      <input id="blur" type="range" min="1" max="50" step="1" value="15"/>
+    </form>
+    <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    
+  </body>
+</html>
